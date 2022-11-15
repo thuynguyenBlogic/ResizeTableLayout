@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             x:Class="FullService_Layout.MainPage"
+             Title="MainPage">
+
+    <AbsoluteLayout>
+        <Grid AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
+              VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+              BackgroundColor="Black"
+              RowSpacing="0" ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <StackLayout HeightRequest="64" BackgroundColor="LightGray">
+
+            </StackLayout>
+
+            <StackLayout Grid.Row="1">
+                <ScrollView Orientation="Both" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <Grid   x:Name="grid_Tables"
+                            BindingContextChanged="grid_Tables_BindingContextChanged"
+                            Padding="20" Background="Gray" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
+                        <!--<skia:SKCanvasView x:Name="canvasView" BackgroundColor="Blue"
+                            PaintSurface="SKCanvasView_PaintSurface">
+
+                        </skia:SKCanvasView>-->
+                    </Grid>
+                </ScrollView>
+            </StackLayout>
+
+            <StackLayout HeightRequest="100" BackgroundColor="LightGray" Grid.Row="2">
+
+            </StackLayout>
+
+        </Grid>
+    </AbsoluteLayout>
+
+</ContentPage>
